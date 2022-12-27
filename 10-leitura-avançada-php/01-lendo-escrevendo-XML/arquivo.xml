@@ -1,0 +1,15 @@
+<rss>
+	<informacoes>
+		<item>
+			<nome>Lucas</nome>
+			<idade>28</idade>
+		</item>
+	</informacoes>
+
+	<informacoes2>
+		<item>
+			<nome>João</nome>
+			<idade>20</idade>
+		</item>
+	</informacoes2>
+</rss>
