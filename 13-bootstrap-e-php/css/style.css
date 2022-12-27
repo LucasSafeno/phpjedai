@@ -50,3 +50,33 @@ section.banner > .container{
 	padding: 10px 18px;
 	background: #26A69A;
 }
+
+section.cadastro-lead{
+	background: #26A69A;
+	padding: 20px 0;
+}
+section.cadastro-lead h2{
+	color: white;
+	font-size: 24px;
+	position: relative;
+	top: 10px;
+}
+.section.cadastro-lead form{
+	position: relative;
+	top: 100px;
+}
+section.cadastro-lead input[type=text]{
+	width: 85%;
+	height: 40px;
+	position: relative;
+	top: 20px;
+	border-color: 1px solid #ccc;
+}
+
+section.cadastro-lead input[type=submit]{
+	width: 15%;
+	height: 40px;
+	position: relative;
+	top: 20px;
+	border-color: 1px solid #ccc;
+}

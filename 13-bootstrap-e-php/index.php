@@ -55,6 +55,22 @@
    	     </div>
         </section>
    </div><!-- box !-->
+   
+
+   <section class="cadastro-lead">
+   	   <div class="container">
+   	   	  <div class="row text-center">
+   	   		<div class="col-md-6">
+   	   			<h2>Entre na nossa lista!</h2>
+   	   		</div>
+   	   		<div class="col-md-6">
+   	   			<form method="post">
+   	   				<input type="text" name="nome" id="nome"><input type="submit" value="Enviar">
+   	   			</form>
+   	   		</div>
+   	   	  </div>
+   	   </div>
+   </section>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
