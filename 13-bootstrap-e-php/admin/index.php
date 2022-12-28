@@ -32,10 +32,10 @@
           <a class="navbar-brand" href="#">Atual.Tech</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Cadastrar Equipe</a></li>
-            <li><a href="#about">Editar Sobre</a></li>
-            <li><a href="#contact">Gerenciar Equipe</a></li>
+          <ul id="menu-principal" class="nav navbar-nav">
+            <li class="active"><a ref_sys="sobre" href="#">Editar Sobre</a></li>
+            <li><a ref_sys="cadastrar_equipe" href="#about">Gerenciar Equipe</a></li>
+            <li><a ref_sys="listar_equipe" href="#contact">Listar Membros</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
@@ -74,22 +74,20 @@
         <div class="row">
           <div class="col-md-3">
             <div class="list-group">
-              <a href="#" class="list-group-item active cor-padrao">
-                <span class="glyphicon glyphicon-home"></span> Home
+              <a href="#" class="list-group-item active cor-padrao" ref_sys="sobre">
+                <span class="glyphicon glyphicon-heart"></span> Sobre
               </a>
            
-
-            
-              <a href="#" class="list-group-item ">
-                <span class="glyphicon glyphicon-home"></span> Sobre
+              <a href="#" class="list-group-item " ref_sys="cadastrar_equipe">
+                <span class="glyphicon glyphicon-pencil"></span> Cadastrar Equipe
               </a>
-           
 
-            
-              <a href="#" class="list-group-item ">
-                <span class="glyphicon glyphicon-pencil"></span> Equipe
-                <span class="badge">2</span>
+              <a href="#" class="list-group-item" ref_sys="listar_equipe">
+                <span class="glyphicon glyphicon-list-alt"></span> Lista Equipe
+                 <span class="badge">2</span>
               </a>
+
+
             </div>
 
           </div>
@@ -143,21 +141,17 @@
                     <tr>
                       <th>ID:</th>
                       <th>Nome do membro:</th>
+                      <th>#</th>
                     </tr>
                   </thead>
                   <tbody>
+                    <?php for($i = 0; $i < 5; $i++): ?>
                     <tr>
                       <td>1</td>
                       <td>Lucas</td>
+                      <td><button class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-trash"></span> Excluir</button></td>
                     </tr>
-                     <tr>
-                      <td>1</td>
-                      <td>Lucas</td>
-                    </tr>
-                     <tr>
-                      <td>1</td>
-                      <td>Lucas</td>
-                    </tr>
+                    <?php endfor; ?>
                   </tbody>
                 </table>
               </div>
@@ -176,5 +170,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+
+
+
+
+        function cliqueMenu(){
+          $('#menu-principal a, .list-group a').click(function(){
+            // Remove classe Active
+            $('#menu-principal a, .list-group a').removeClass('active').removeClass('cor-padrao')
+            $('#menu-principal a').parent().removeClass('active')
+
+            //console.log($('#menu-principal a[ref_sys='+$(this).attr('ref_sys')+']'))
+            // Adicioanr classe active no elemento clicado atual
+            $('#menu-principal a[ref_sys='+$(this).attr('ref_sys')+']').parent().addClass('active')
+            $('.list-group a[ref_sys='+$(this).attr('ref_sys')+']').addClass('active').addClass('cor-padrao')
+
+            return false;
+          })
+        }// CliqueMenu
+
+
+
+         cliqueMenu(); 
+      })
+    </script>
   </body>
 </html>
