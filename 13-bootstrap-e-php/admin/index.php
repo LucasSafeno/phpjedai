@@ -58,6 +58,117 @@
         </div>
       </div>
     </header>
+
+    <section class="bread">
+      <div class="container">
+        <div class="row">
+          <ol class="breadcrumb">
+            <li>Home</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="principal">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="list-group">
+              <a href="#" class="list-group-item active cor-padrao">
+                <span class="glyphicon glyphicon-home"></span> Home
+              </a>
+           
+
+            
+              <a href="#" class="list-group-item ">
+                <span class="glyphicon glyphicon-home"></span> Sobre
+              </a>
+           
+
+            
+              <a href="#" class="list-group-item ">
+                <span class="glyphicon glyphicon-pencil"></span> Equipe
+                <span class="badge">2</span>
+              </a>
+            </div>
+
+          </div>
+          <div class="col-md-9">
+
+            <div class="panel panel-default">
+              <div class="panel-heading cor-padrao">
+                <h3 class="panel-title">Sobre</h3>
+              </div>
+              <div class="panel-body">
+                <!-- Body panel !-->
+                <form >
+                  <div class="form-group">
+                    <label for="">Código HTML :</label>
+                    <textarea style="height:140px; resize: vertical;" name="" id="" class="form-control"></textarea>
+                  </div>
+                  <a href="#" class="btn btn-default">Submit</a>
+                </form>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading cor-padrao">
+                <h3 class="panel-title">Cadastrar Equipe</h3>
+              </div>
+              <div class="panel-body">
+                <!-- Body panel !-->
+                <form >
+                   <div class="form-group">
+                    <label for="">Nome Membro :</label>
+                    <input type="text" name="nome" id="nome" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="">Descrição do Membro</label>
+                    <textarea style="height:140px; resize: vertical;" name="desc" id="desc" class="form-control"></textarea>
+                  </div>
+                  <a href="#" class="btn btn-default">Submit</a>
+                </form>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading cor-padrao">
+                <h3 class="panel-title">Membros da Equipe </h3>
+              </div>
+              <div class="panel-body">
+                <!-- Body panel !-->
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>ID:</th>
+                      <th>Nome do membro:</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Lucas</td>
+                    </tr>
+                     <tr>
+                      <td>1</td>
+                      <td>Lucas</td>
+                    </tr>
+                     <tr>
+                      <td>1</td>
+                      <td>Lucas</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
     
 
 
