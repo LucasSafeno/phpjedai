@@ -109,3 +109,47 @@ section.diferenciais h3{
 	margin-top: 30px;
 }
 
+section.equipe h2{
+	margin: 0;
+	background: #26A69A;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+}
+.equipe-container{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.equipe-single{
+	width: 100%;
+	padding: 20px 10px;
+	border: 1px solid #ccc;
+	box-shadow:  8px 7px 5px -3px rgba(20,20,20,0.6);
+}
+.user-picture{
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+.user-picture-child{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: green;
+}
+
+@media screen and (max-width: 1024px){
+	.user-picture{
+	width: 40%;
+	padding-top: 40%;
+	position: relative;
+	}
+
+
+}

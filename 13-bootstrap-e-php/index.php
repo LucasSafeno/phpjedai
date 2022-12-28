@@ -116,6 +116,48 @@
      </div>
    </section>
 
+   <section class="equipe">
+     <h2>Equipe</h2>
+     <div class="container equipe-container">
+       <div class="row">
+         <div class="col-md-6">
+           <div class="equipe-single">
+             <div class="row">
+               <div class="col-md-2">
+                 <div class="user-picture">
+                   <div class="user-picture-child"></div>
+                 </div>
+               </div>
+               <div class="col-md-10">
+                 <h3>Lucas</h3>
+                 <p>
+                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                 </p>
+               </div>
+             </div>
+           </div>
+         </div>
+          <div class="col-md-6">
+            <div class="equipe-single">
+             <div class="row">
+               <div class="col-md-2">
+                 <div class="user-picture">
+                   <div class="user-picture-child"></div>
+                 </div>
+               </div>
+               <div class="col-md-10">
+                 <h3>Lucas</h3>
+                 <p>
+                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                 </p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div> <!-- Equipe container !-->
+   </section>
+
    </div><!-- box !-->
 
 
