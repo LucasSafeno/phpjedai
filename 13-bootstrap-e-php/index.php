@@ -158,6 +158,62 @@
      </div> <!-- Equipe container !-->
    </section>
 
+
+   <section class="final-site">
+     <div class="container">
+       <div class="row">
+         <div class="col-md-6">
+          <h2>Fale Conosco</h2>
+           <form action="">
+             
+             <div class="form-group">
+               <label for="email">Email</label>
+               <input type="email" name="email" id="email"  class="form-control">
+             </div>
+
+             <div class="form-group">
+               <label for="nome">Nome</label>
+               <input type="text" name="nome" id="nome"  class="form-control">
+             </div>
+
+             <div class="form-group">
+               <label for="mensagem">Mensagem</label>
+               <textarea name="mensagem" id="mensagem" class="form-control"></textarea>
+             </div>
+
+
+             <button class="btn btn-primary">Submit</button>
+
+           </form>
+         </div>
+         <div class="col-md-6">
+           <h2>Nossos planos de Hospedagem</h2>
+           <table class="table">
+             <thead>
+               <tr>
+                 <th>Plano Mensal</th>
+                 <th>Plano Anual</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                 <td>R$ 100,00</td>
+                 <td>R$ 100,00</td>
+               </tr>
+               <tr>
+             </tbody>
+           </table>
+           
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <footer>
+     <p class="text-center">Todos os direitos reservados a Atual.Tech</p>
+   </footer>
+
+
    </div><!-- box !-->
 
 
