@@ -53,6 +53,41 @@
   color: #ffffff;
 }
 
+/*Custom Style*/
+.navbar{
+  margin-bottom: 0 !important;
+  border-radius: 0;
+}
+header#header{
+  background: #333;
+  color: white;
+}
+
+#header h2{
+  margin-top: 20px;
+}
+
+#header p{
+  margin-top: 20px;
+  position: relative;
+  top: 9px;
+
+}
+
+
+@media screen and (max-width: 1000px){
+  #header{
+    text-align: center;
+  }
+  #header p{
+  margin-top: 20px;
+  position: relative;
+  top: 0;
+  }
+
+}
+
+
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #ecf0f1;
@@ -68,3 +103,4 @@
     background-color: #11404d;
   }
 }
+

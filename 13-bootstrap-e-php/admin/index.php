@@ -20,7 +20,7 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -39,12 +39,25 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="?sair">Sair!</a>
+              <a href="?sair"><span class="glyphicon glyphicon-off"></span> Sair!</a>
             </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <h2><span class="glyphicon glyphicon-cog"></span> Painel de Controle</h2>
+          </div>
+          <div class="col-md-3">
+            <p> <span class="glyphicon glyphicon-time"></span> Seu último login foi : 28/06/2022</p>
+          </div>
+        </div>
+      </div>
+    </header>
     
 
 
