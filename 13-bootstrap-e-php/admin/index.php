@@ -20,7 +20,7 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -45,6 +45,8 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+
+    <div style="position: relative;top:50px" class="box">
 
     <header id="header">
       <div class="container">
@@ -93,7 +95,7 @@
           </div>
           <div class="col-md-9">
 
-            <div class="panel panel-default">
+            <div id="sobre_section" class="panel panel-default">
               <div class="panel-heading cor-padrao">
                 <h3 class="panel-title">Sobre</h3>
               </div>
@@ -109,7 +111,7 @@
               </div>
             </div>
 
-            <div class="panel panel-default">
+            <div id="cadastrar_equipe_section"class="panel panel-default">
               <div class="panel-heading cor-padrao">
                 <h3 class="panel-title">Cadastrar Equipe</h3>
               </div>
@@ -130,7 +132,7 @@
               </div>
             </div>
 
-            <div class="panel panel-default">
+            <div id="listar_equipe_section"class="panel panel-default">
               <div class="panel-heading cor-padrao">
                 <h3 class="panel-title">Membros da Equipe </h3>
               </div>
@@ -162,8 +164,9 @@
           </div>
         </div>
       </div>
+
     </section>
-    
+
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -173,10 +176,12 @@
     <script type="text/javascript">
       $(function(){
 
-
+         cliqueMenu() 
+          scrollItem()
 
 
         function cliqueMenu(){
+
           $('#menu-principal a, .list-group a').click(function(){
             // Remove classe Active
             $('#menu-principal a, .list-group a').removeClass('active').removeClass('cor-padrao')
@@ -191,9 +196,18 @@
           })
         }// CliqueMenu
 
+        function scrollItem(){
+          $('#menu-principal a, .list-group a').click(function(){
+            var ref = '#'+$(this).attr('ref_sys')+'_section'
+            var offset = $(ref).offset().top
+            $('html,body').animate({'scrollTop':offset-50})
+            if($(window)[0].innerWidth <= 768){
+              $('.icon-bar').click()
+            }
+          })
+        }// scrollItem
 
-
-         cliqueMenu(); 
+        
       })
     </script>
   </body>
