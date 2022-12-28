@@ -59,7 +59,6 @@ section.cadastro-lead h2{
 	color: white;
 	font-size: 24px;
 	position: relative;
-	top: 10px;
 }
 .section.cadastro-lead form{
 	position: relative;
@@ -69,7 +68,6 @@ section.cadastro-lead input[type=text]{
 	width: 85%;
 	height: 40px;
 	position: relative;
-	top: 20px;
 	border-color: 1px solid #ccc;
 }
 
@@ -77,6 +75,37 @@ section.cadastro-lead input[type=submit]{
 	width: 15%;
 	height: 40px;
 	position: relative;
-	top: 20px;
 	border-color: 1px solid #ccc;
 }
+
+section.depoimentos{
+	padding: 40px 0;
+}
+
+section.depoimentos h2{
+	color: #4B4B4B;
+}
+
+section.depoimentos blockquote{
+	color: #4B4B4B;
+	font-size: 16px;
+}
+section.diferenciais > h2{
+	color: #4B4B4B;
+}
+section.diferenciais{
+	padding: 20px 0;
+	background: rgb(225,225,225);
+}
+section.diferenciais h3{
+	color: #26A69A;
+}
+
+.diferenciais-container h2{
+	font-size: 22px;
+}
+
+.diferenciais-container{
+	margin-top: 30px;
+}
+

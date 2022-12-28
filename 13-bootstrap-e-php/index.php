@@ -28,7 +28,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">ProjetoWEB</a>
+          <a class="navbar-brand" href="#"><?php echo htmlentities('<'); ?>Atual.Tech</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -47,14 +47,14 @@
    	     <div class="container chamada-banner">
    	  	   <div class="row">
    	  	   	<div class="col-md-12 text-center">
-   	  	   		 <h2> <?php echo htmlentities('<')?>AtualTech</h2>
+   	  	   		 <h2> <?php echo htmlentities('<')?>Atual.Tech</h2>
    	  	   		 <p>Empresa voltada para o desenvolvimento de sistemas e consultoria em T.I</p>
    	  	   		 <a href="#">Saiba mais</a>
    	  	   	</div>
    	  	   </div>
    	     </div>
         </section>
-   </div><!-- box !-->
+   
    
 
    <section class="cadastro-lead">
@@ -71,6 +71,53 @@
    	   	  </div>
    	   </div>
    </section>
+
+   <section class="depoimentos text-center">
+     <div class="container">
+       <div class="row">
+         <div class="col-md-12">
+           <h2>Depoimento</h2>
+           <blockquote>
+             <p>
+             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+             </p>
+           </blockquote>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <section class="diferenciais text-center">
+    <h2>Conheça Nossa Empresa</h2>
+     <div class="container diferenciais-container">
+       <div class="row">
+         <div class="col-md-4">
+           <h3><span class="glyphicon glyphicon-glass"></span></h3>
+           <h2>Diferencial #1</h2>
+           <p>
+             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+           </p>
+         </div>
+         <div class="col-md-4">
+           <h3><span class="glyphicon glyphicon-star"></span></h3>
+           <h2>Diferencial #1</h2>
+           <p>
+             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+           </p>
+         </div>
+         <div class="col-md-4">
+           <h3><span class="glyphicon glyphicon-heart"></span></h3>
+           <h2>Diferencial #1</h2>
+           <p>
+             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+           </p>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   </div><!-- box !-->
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
