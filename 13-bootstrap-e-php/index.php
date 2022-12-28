@@ -110,25 +110,15 @@
      <h2>Equipe</h2>
      <div class="container equipe-container">
        <div class="row">
-         <div class="col-md-6">
-           <div class="equipe-single">
-             <div class="row">
-               <div class="col-md-2">
-                 <div class="user-picture">
-                   <div class="user-picture-child">
-                     <span class="glyphicon glyphicon-user"></span>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-md-10">
-                 <h3>Lucas</h3>
-                 <p>
-                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                 </p>
-               </div>
-             </div>
-           </div>
-         </div>
+         
+         <?php 
+          $selecionarMembros = $pdo->prepare("SELECT * FROM tb_equipe");
+          $selecionarMembros->execute();
+          $membros = $selecionarMembros->fetchAll();
+
+          for($i = 0; $i < count($membros); $i++):  
+
+          ?>
           <div class="col-md-6">
             <div class="equipe-single">
              <div class="row">
@@ -138,14 +128,15 @@
                  </div>
                </div>
                <div class="col-md-10">
-                 <h3>Lucas</h3>
+                 <h3><?php echo $membros[$i]['nome']; ?></h3>
                  <p>
-                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    <?php echo $membros[$i]['descricao']; ?>
                  </p>
                </div>
              </div>
            </div>
          </div>
+       <?php endfor; ?>
        </div>
      </div> <!-- Equipe container !-->
    </section>

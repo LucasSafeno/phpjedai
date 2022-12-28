@@ -120,6 +120,13 @@
 
 
               echo '<div class="alert alert-success" role="alert">O Código HTML <b>Sobre</b> foi editado com sucesso!</div>';
+            }else if(isset($_POST['cadastrar_equipe'])){
+              $nome = $_POST['nome'];
+              $descricao = $_POST['descricao'];
+
+              $sql = $pdo->prepare("INSERT INTO tb_equipe VALUES (null,?, ?)");
+              $sql->execute(array($nome, $descricao));
+               echo '<div class="alert alert-success" role="alert">O membro '.$nome.' foi cadastrado com sucesso!</div>';
             }
 
              ?>
@@ -138,7 +145,7 @@
                     </textarea>
                   </div>
                   <input type="hidden" name="editar_sobre" value="">
-                  <button name="acao" href="#" class="btn btn-default">Submit</button>
+                  <button name="acao" class="btn btn-default">Submit</button>
                 </form>
               </div>
             </div>
@@ -149,7 +156,7 @@
               </div>
               <div class="panel-body">
                 <!-- Body panel !-->
-                <form >
+                <form method="post" >
                    <div class="form-group">
                     <label for="">Nome Membro :</label>
                     <input type="text" name="nome" id="nome" class="form-control">
@@ -157,9 +164,10 @@
 
                   <div class="form-group">
                     <label for="">Descrição do Membro</label>
-                    <textarea style="height:140px; resize: vertical;" name="desc" id="desc" class="form-control"></textarea>
+                    <textarea style="height:140px; resize: vertical;" name="descricao" id="descricao" class="form-control"></textarea>
                   </div>
-                  <a href="#" class="btn btn-default">Submit</a>
+                  <input type="hidden" name="cadastrar_equipe" value="">
+                  <button nome="acao" class="btn btn-default">Submit</button>
                 </form>
               </div>
             </div>
@@ -179,13 +187,18 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <?php for($i = 0; $i < 5; $i++): ?>
+                    <?php
+                    $selecionarMembros = $pdo->prepare("SELECT id,nome FROM tb_equipe");
+                    $selecionarMembros->execute();
+                    $membros = $selecionarMembros->fetchAll();
+                     foreach($membros as $key => $values):
+                      ?>
                     <tr>
-                      <td>1</td>
-                      <td>Lucas</td>
+                      <td><?php echo $values['id']; ?></td>
+                      <td><?php echo $values['nome']; ?></td>
                       <td><button class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-trash"></span> Excluir</button></td>
                     </tr>
-                    <?php endfor; ?>
+                    <?php endforeach; ?>
                   </tbody>
                 </table>
               </div>
