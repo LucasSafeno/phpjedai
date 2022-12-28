@@ -1,3 +1,13 @@
+<?php
+  $pdo = new PDO('mysql:host=localhost;dbname=paineladm', 'root', 'root');
+
+  $sobre = $pdo->prepare('SELECT * FROM tb_sobre');
+  $sobre->execute();
+  $sobre = $sobre->fetch()['sobre'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -91,27 +101,7 @@
     <h2>Conheça Nossa Empresa</h2>
      <div class="container diferenciais-container">
        <div class="row">
-         <div class="col-md-4">
-           <h3><span class="glyphicon glyphicon-glass"></span></h3>
-           <h2>Diferencial #1</h2>
-           <p>
-             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-           </p>
-         </div>
-         <div class="col-md-4">
-           <h3><span class="glyphicon glyphicon-star"></span></h3>
-           <h2>Diferencial #1</h2>
-           <p>
-             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-           </p>
-         </div>
-         <div class="col-md-4">
-           <h3><span class="glyphicon glyphicon-heart"></span></h3>
-           <h2>Diferencial #1</h2>
-           <p>
-             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-           </p>
-         </div>
+            <?php echo $sobre; ?>
        </div>
      </div>
    </section>
@@ -125,7 +115,9 @@
              <div class="row">
                <div class="col-md-2">
                  <div class="user-picture">
-                   <div class="user-picture-child"></div>
+                   <div class="user-picture-child">
+                     <span class="glyphicon glyphicon-user"></span>
+                   </div>
                  </div>
                </div>
                <div class="col-md-10">

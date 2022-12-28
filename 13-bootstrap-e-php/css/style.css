@@ -144,6 +144,15 @@ section.equipe h2{
 	background: rgb(225, 225, 225);
 }
 
+.user-picture-child > span{
+	color: rgb(110, 110, 110);
+	font-size: 20px;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
 section.final-site{
 	padding: 30px 0;
 	color: #4B4B4B;
